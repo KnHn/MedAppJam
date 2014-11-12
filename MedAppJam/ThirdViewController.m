@@ -15,6 +15,8 @@
 
 @implementation ThirdViewController
 
+@synthesize myTextField;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,6 +37,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)showMessage
+{
+    double myDouble = 12.6;
+    NSString *alertString = [NSString stringWithFormat:@"%g",myDouble];
+    UIAlertView *helloWorldAlert = [[UIAlertView alloc]
+                                    initWithTitle:@"Display"
+                                    message:self.myTextField.text
+                                    delegate:nil cancelButtonTitle:@"OK"
+                                    otherButtonTitles:nil];
+    NSLog(@"You entered %@",self.myTextField.text);
+    // Display the Hello World Message
+    [helloWorldAlert show];
+    
+    
 }
 
 @end
