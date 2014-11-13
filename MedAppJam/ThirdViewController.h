@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ThirdViewController :UIViewController
+<UITextFieldDelegate>
 
+@property(strong,nonatomic) IBOutlet UITextField *myTextField;
 @end
